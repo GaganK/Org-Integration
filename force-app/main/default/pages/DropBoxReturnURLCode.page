@@ -1,0 +1,3 @@
+<apex:page controller="DropBoxReturnURLCode" action="{!requestCode}">
+    {!responseCode}
+</apex:page>

@@ -1,0 +1,59 @@
+<aura:component controller="DropBoxWebServices" implements="force:hasRecordId,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<aura:attribute name="recordId" type="Id" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <article class="slds-card" style="border:2px solid #DDDBDA; padding-right:6px; padding-left:6px; border-radius: 7px;">
+      <div class="slds-card__header slds-grid">
+        <header class="slds-media slds-media_center slds-has-flexi-truncate">
+          <div class="slds-media__figure"> 
+              <span class="slds-icon_container slds-icon-standard-contact" title="contact">
+                <img src="{!$Resource.DropBox_Logo}" />
+              </span>
+          </div>
+          <div class="slds-media__body">
+            <!--<h2 class="slds-card__header-title"> <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="Contacts (1)"> <span>Contacts (1)</span> </a> </h2>-->
+          </div>
+          <div class="slds-no-flex">
+              
+              <ul class="slds-button-group-row">
+                    <li class="slds-button-group-item">
+                    	<lightning:input variant="brand" type="file" class="slds-button" style="margin-top:-35px;"/>
+                    </li>
+                    <li class="slds-button-group-item">
+                    	<lightning:button class="slds-button" label="Create Folder" />
+                    </li>
+                    <!--<li class="slds-button-group-item">
+                    	<button class="slds-button slds-button_neutrald">Delete</button>
+                    </li>-->
+                </ul>
+              
+            </div>
+        </header>
+      </div>
+      <div class="slds-card__body">
+        <table class="slds-table slds-table_cell-buffer slds-no-row-hover slds-table_bordered slds-table_fixed-layout" role="grid">
+          <thead>
+            <tr class="slds-line-height_reset">
+              <th class="" scope="col"> <div class="slds-truncate" title="Name:">Name</div></th>
+              <th class="" scope="col"> <div class="slds-truncate" title="Modified:">Modified</div></th>
+              <th class="" scope="col"> <div class="slds-truncate" title="Size:">Size</div></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="slds-hint-parent">
+              	  <th scope="row"><div class="slds-truncate" title=""> <img src="{!$Resource.DropBox_Folder}" width="40" height="26"/> </div></th>
+                  <td role="gridcell"><div class="slds-truncate" title="">28/1/2020 03:01 PM</div></td>
+              	  <td role="gridcell"><div class="slds-truncate" title="">2.6 MB</div></td>
+            </tr>
+            <tr class="slds-hint-parent">
+                <th scope="row"><div class="slds-truncate" title=""> <a href="hhtps:google.com">salesforce developer doc.docx</a> </div></th>
+                  <td role="gridcell"><div class="slds-truncate" title="">28/1/2020 02:01 PM</div></td>
+              	  <td role="gridcell"><div class="slds-truncate" title="">6.6 MB</div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <footer class="slds-card__footer">  </footer>
+</article>
+
+</aura:component>

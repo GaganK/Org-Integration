@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Send SMS" icon-name="custom:custom23">
+        <p class="slds-p-horizontal_small">&nbsp;SMS Balance: 43.00 &nbsp;&nbsp;&nbsp;Provider: SMS2Fast</p>
+        <div class="slds-m-around_small">
+            <lightning-input label="Mobile" value={mobile} onchange={handleMobileChange}></lightning-input>
+            <lightning-textarea label="Message" value={messageSMS} onchange={handlemessageSMSChange}></lightning-textarea>
+            <lightning-button label="Send" variant="brand" onclick={sendSMS}></lightning-button>
+        </div>
+     </lightning-card>
+</template>

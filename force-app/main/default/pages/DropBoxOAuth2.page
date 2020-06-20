@@ -1,0 +1,17 @@
+<apex:page controller="DropBoxWebServices" action="{!requestCode}">
+  <apex:form id="fm" >
+    	<apex:pageBlock title="OAuth_Code_Example">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="Request Code" action="{!requestCode}" />
+            </apex:pageBlockButtons>
+        	<apex:pageBlockSection columns="1">
+                <apex:pageBlockSectionItem >
+                    {!returnBackURL}<br/><br/>
+                    {!responseCode}<br/><br/>
+                    {!result}
+                    <!--<img src="data:image/jpg;charset=utf8;base64,{!paramvalue}" />-->
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
